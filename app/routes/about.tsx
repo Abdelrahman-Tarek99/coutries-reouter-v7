@@ -1,3 +1,16 @@
+import type { Route } from "./+types/about";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "About - RESTExplorer" },
+    {
+      name: "description",
+      content:
+        "Learn about the RESTExplorer app and how it uses the REST Countries API to provide information about countries worldwide.",
+    },
+  ];
+}
+
 export default function About() {
   return (
     <div className="py-16 bg-white">

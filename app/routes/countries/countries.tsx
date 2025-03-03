@@ -4,7 +4,13 @@ import type { SelectOption } from "~/shared/types";
 import { useCountries } from "./useCountries";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
+import type { Route } from "./+types/countries";
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Countries Representation" },
+    { name: "Check out countries data ", content: "Welcome to RESTExplorer" },
+  ];
+}
 export default function Countries() {
   const {
     search,

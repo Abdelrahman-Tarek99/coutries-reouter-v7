@@ -3,6 +3,20 @@ export interface SelectOption {
   value: string;
 }
 
+export namespace Route {
+  export interface LoaderData {
+    countryData: Country[] | Country;
+  }
+
+  export interface MetaArgs {
+    data?: LoaderData;
+  }
+
+  export interface ComponentProps {
+    loaderData: LoaderData;
+  }
+}
+
 export interface Country {
   name: Name;
   tld: string[];
