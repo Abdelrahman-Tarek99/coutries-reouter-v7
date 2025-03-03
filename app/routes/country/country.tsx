@@ -4,12 +4,24 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import type { Route } from "./+types/country";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ params, data }: Route.MetaArgs) {
+  const { country } = useParams();
+  // Get country name from data or params for more specific meta
+  const countryName = country;
+
   return [
-    { title: "Learn about each country alone" },
+    { title: `Learn about ${countryName} | Countries Explorer` },
     {
-      name: "Check out country data ",
-      content: "Welcome to the country data representation",
+      name: "description",
+      content: `Explore detailed information about ${countryName} including population, capital, region, and more. Comprehensive country data and facts at Countries Explorer.`,
+    },
+    {
+      name: "keywords",
+      content: `${countryName}, country data, population, capital, region, country explorer, global information`,
+    },
+    {
+      property: "og:url",
+      content: `https://restcountries.com/v3.1/name/${countryName}?fullText=true`,
     },
   ];
 }

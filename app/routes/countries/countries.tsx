@@ -8,7 +8,23 @@ import type { Route } from "./+types/countries";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Countries Representation" },
-    { name: "Check out countries data ", content: "Welcome to RESTExplorer" },
+    {
+      name: "description",
+      content:
+        "Explore detailed information about countries around the world including regions, populations, and more on Countries App. Interactive searchable database of global nations.",
+    },
+    {
+      name: "keywords",
+      content:
+        "countries, world data, population statistics, regions, global nations, country explorer",
+    },
+    { property: "og:url", content: "https://restcountries.com/v3.1/all" },
+    { property: "og:title", content: "Countries Representation" },
+    {
+      property: "og:description",
+      content:
+        "Interactive explorer for country information and statistics from around the world.",
+    },
   ];
 }
 export default function Countries() {

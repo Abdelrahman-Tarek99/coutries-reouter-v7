@@ -8,6 +8,20 @@ export function meta({}: Route.MetaArgs) {
       content:
         "Learn about the RESTExplorer app and how it uses the REST Countries API to provide information about countries worldwide.",
     },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://coutries-reouter-v7.vercel.app/about",
+    },
+    {
+      property: "og:title",
+      content: "About the REST Countries Explorer",
+    },
+    {
+      property: "og:description",
+      content:
+        "Explore detailed information about countries across the globe using our interactive country data explorer.",
+    },
   ];
 }
 
